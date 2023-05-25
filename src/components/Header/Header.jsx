@@ -8,7 +8,6 @@ function Header() {
     <header className="Header">
       <Sup />
       <Bottom />
-      <Sign />
     </header>
   );
 }
@@ -16,9 +15,11 @@ function Header() {
 function Sup() {
   return (
     <div className="Header-sup">
-      <Logo />
-      <Nav />
-      <MenuBtn />
+      <div className="Wrapper">
+        <Logo />
+        <Nav />
+        <Sign />
+      </div>
     </div>
   );
 }
@@ -40,11 +41,13 @@ function Nav() {
   return (
     <nav className="Header-nav">
       <ul className="Header-ul">
-        {menu.map(({ id, href, title, disabled }) => (
+        {menu.map(({ id, href, title, disabled, active }) => (
           <li key={id} className="Header-li">
             <a
               href={href}
-              className={`Header-link ${disabled ? 'disabled' : ''}`}
+              className={`Header-link ${disabled ? 'disabled' : ''} ${
+                active ? 'active' : ''
+              }`}
             >
               {title}
             </a>
@@ -57,17 +60,20 @@ function Nav() {
 
 function Sign() {
   return (
-    <button className="Header-btn">
-      <svg className="Header-sign"></svg>
-      <span className="Header-span">Sign in</span>
-    </button>
+    <div className="Header-extra">
+      <button className="Header-btn">
+        <Icon clase="Header-user" name="sign" />
+        <span className="Header-span">Sign in</span>
+      </button>
+      <MenuBtn />
+    </div>
   );
 }
 
 function MenuBtn() {
   return (
     <button className="Header-menu">
-      <Icon name="menu" />
+      <Icon clase="Header-list" name="menu" />
     </button>
   );
 }

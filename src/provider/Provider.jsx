@@ -5,7 +5,7 @@ const bbdd = {
   header: {
     title: 'The Game Awards',
     menu: [
-      { id: uuidv4(), title: 'Home', href: '#' },
+      { id: uuidv4(), title: 'Home', href: '#', active: true },
       { id: uuidv4(), title: 'News', href: '#' },
       { id: uuidv4(), title: 'About', href: '#' },
       { id: uuidv4(), title: 'Rewind', href: '#' },

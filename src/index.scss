@@ -1,7 +1,7 @@
 :root {
   --negro: #393939;
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --tipo-principal: 'Barlow Condensed', sans-serif;
+  --tipo-secundaria: 'Bebas Neue', sans-serif;
 }
 
 *,
@@ -119,4 +119,10 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.Wrapper {
+  width: 90%;
+  max-width: 100rem;
+  margin: auto;
 }
