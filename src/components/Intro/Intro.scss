@@ -1,6 +1,6 @@
 .Intro {
   position: relative;
-  padding: 25vh 0;
+  padding: 10vh 0 20vh;
 
   &-img {
     position: absolute;
@@ -19,25 +19,28 @@
 }
 
 .Vote {
-  max-width: 40rem;
   width: 90%;
   position: relative;
   z-index: 1;
   color: white;
+  margin: 0 0 8vh;
 
   &-h2 {
   }
 
   &-icon {
+    // FIXME
     margin-left: -4em;
     min-height: 10em;
+    max-width: 40rem;
   }
 
   &-date {
-    font-size: 9em;
+    font-size: clamp(1rem, 18vw, 10rem);
     text-transform: uppercase;
     font-weight: 800;
   }
+
   &-month {
     -webkit-text-stroke: 3px;
     -webkit-text-fill-color: transparent;
@@ -47,8 +50,14 @@
     margin: 0 0 0 0.1em;
   }
 
+  &-place {
+    font-size: clamp(1rem, 5.2vw, 4rem);
+    font-weight: 600;
+  }
+
   &-now {
-    width: 80%;
+    width: 100%;
+    max-width: 33rem;
     margin: 0.5em 0 0;
     padding: 0.7em 1.5em 0.8em;
     border: 1px solid white;
@@ -70,11 +79,63 @@
   position: absolute;
   bottom: 0;
   z-index: 1;
+  overflow: hidden;
 
-  &-p {
+  &-ul {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 300%;
+
     &--stroke {
+      -webkit-text-stroke: 1px;
+      -webkit-text-fill-color: transparent;
+      font-size: 7vw;
+      color: white;
+      animation: move 20s linear infinite both;
     }
     &--white {
+      font-size: 3vw;
+      background-color: white;
+      color: #ff4b13;
+      animation: move 24s linear infinite both;
     }
+  }
+
+  &-li {
+    width: 100%;
+    text-align: center;
+
+    &--white {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0 2px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0.4em;
+        height: 0.4em;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        right: -0.2em;
+      }
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3 * 2));
   }
 }

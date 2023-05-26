@@ -29,8 +29,9 @@ function Vote() {
         <span className="Vote-month">December</span>
         <span className="Vote-day">8</span>
       </div>
+      <h3 className="Vote-place">Microsoft Theater, Los Angeles</h3>
       <ShinyBtn name="Add event to calendar" />
-      <a href="@" className="Vote-now">
+      <a href="#" className="Vote-now">
         Vote now
       </a>
     </div>
@@ -40,12 +41,31 @@ function Vote() {
 function Marquee() {
   return (
     <div className="Intro-marquee Marquee">
-      <p className="Marquee-p Marquee-p--stroke">
-        Global celebration of video games
-      </p>
-      <p className="Marquee-p Marquee-p--white">
-        Streams live on all platforms
-      </p>
+      <ul className="Marquee-ul Marquee-ul--stroke">
+        <li className="Marquee-li">Global celebration of video games</li>
+        <li className="Marquee-li">Global celebration of video games</li>
+        <li className="Marquee-li">Global celebration of video games</li>
+      </ul>
+      <ul className="Marquee-ul Marquee-ul--white">
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+        <li className=" Marquee-li Marquee-li--white">
+          Streams live on all platforms
+        </li>
+      </ul>
     </div>
   );
 }
